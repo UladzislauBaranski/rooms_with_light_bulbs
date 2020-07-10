@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms</title>
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <a class="navbar-brand" th:href="@{/home}">Room with bulbs</a>
+    <div class="row">
+        <div class="col">
+            <table class="table-wrapper">
+                <thead>
+                <h1 class="text-center">Room list</h1>
+                <tr>
+                    <td>Name</td>
+                    <td>Country</td>
+                    <td>Light is enable</td>
+                </tr>
+                </thead>
+                <tbody th:each="room:${rooms}">
+                <tr>
+                    <td th:text="${room.name}">review</td>
+                    <td th:text="${room.country}">country</td>
+                    <td th:text="${room.lightIsEnable}">light</td>
+                    <td>
+                        <a th:href="@{/rooms/{id}(id=${room.id})}" class="button"
+                           role="button">Go to the room</a>
+                    </td>
+                </tbody>
+            </table>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" th:href="@{/rooms?page=1}" th:value="1">1</a></li>
+                <li class="page-item"><a class="page-link" th:href="@{/rooms?page=2}" th:value="2">2</a></li>
+                <li class="page-item"><a class="page-link" th:href="@{/rooms?page=3}" th:value="3">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

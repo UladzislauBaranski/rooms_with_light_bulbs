@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="../static/css/carousel.css" th:href="@{/css/carousel.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/home}"> Room with bulbs </a>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/home}">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/rooms/add}">Add room</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/rooms}">List room</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active"
+             style="background-image: url('https://i.47news.ru/photos/2019/01/bR9cbVvxeVo0nMa4pAig.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+                <h2 class="display-4">Rooms with light bulbs</h2>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>
