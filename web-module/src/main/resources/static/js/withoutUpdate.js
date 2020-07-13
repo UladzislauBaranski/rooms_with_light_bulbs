@@ -5,8 +5,8 @@ $(document).ready(function () {
             type: 'POST',
             url: "enable",
             data: {id: fd},
-            success: function () {
-                document.location.reload()
+            success: function (result) {
+                $('#result').html(result)
             }
         })
     });
@@ -16,8 +16,8 @@ $(document).ready(function () {
             type: 'POST',
             url: "disable",
             data: {id: fd},
-            success: function () {
-                document.location.reload()
+            success: function (result) {
+                $('#result').html(result)
             }
         });
 

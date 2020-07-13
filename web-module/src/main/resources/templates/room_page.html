@@ -7,7 +7,7 @@
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"/>
 </head>
 <body>
-<div class="container">
+<div class="container" id="result">
     <a class="navbar-brand" th:href="@{/home}"> start page </a>
     <div th:if="${room eq null}">
         <h1 class="display-8 font-italic text-center"><strong>This room doesn't exist</strong></h1>
